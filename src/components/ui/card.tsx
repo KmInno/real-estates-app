@@ -1,13 +1,13 @@
-import { ReactNode } from "react";
+import type { ReactNode } from "react";
+type CardProps = {
+  children: ReactNode;
+  className?: string;
+};
 
-export function Card({ children }: { children: ReactNode }) {
-  return (
-    <div className="rounded-2xl border border-white/10 bg-white/5 shadow-lg">
-      {children}
-    </div>
-  );
+export function Card({ children, className = "" }: CardProps) {
+  return <div className={className}>{children}</div>;
 }
 
-export function CardContent({ children }: { children: ReactNode }) {
-  return <div className="p-4">{children}</div>;
+export function CardContent({ children, className = "" }: CardProps) {
+  return <div className={className}>{children}</div>;
 }

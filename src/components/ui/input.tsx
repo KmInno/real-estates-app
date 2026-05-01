@@ -1,10 +1,12 @@
-import { InputHTMLAttributes } from "react";
+import type { InputHTMLAttributes } from "react";
 
-export function Input(props: InputHTMLAttributes<HTMLInputElement>) {
+type InputProps = InputHTMLAttributes<HTMLInputElement>;
+
+export function Input({ className = "", ...props }: InputProps) {
   return (
     <input
+      className={`px-4 py-2 rounded-xl bg-white/5 border border-white/10 text-white ${className}`}
       {...props}
-      className="w-full px-4 py-2 rounded-xl bg-white/5 border border-white/10 text-white placeholder-white/40 focus:outline-none focus:ring-2 focus:ring-white/20"
     />
   );
 }

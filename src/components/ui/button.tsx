@@ -1,16 +1,20 @@
-import { ButtonHTMLAttributes } from "react";
-
-type Props = ButtonHTMLAttributes<HTMLButtonElement> & {
-  variant?: "primary" | "outline";
+import type { ButtonHTMLAttributes } from "react";
+type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement> & {
+  variant?: "default" | "outline";
 };
 
-export function Button({ variant = "primary", className = "", ...props }: Props) {
-  const base = "px-4 py-2 rounded-full font-medium transition";
+export function Button({
+  className = "",
+  variant = "default",
+  ...props
+}: ButtonProps) {
+  const base =
+    "px-4 py-2 rounded-xl transition font-medium";
 
   const styles =
     variant === "outline"
-      ? "border border-white/20 hover:bg-white/10"
-      : "bg-white text-black hover:opacity-80";
+      ? "border border-white/20 bg-white/5 text-white"
+      : "bg-white text-black";
 
   return <button className={`${base} ${styles} ${className}`} {...props} />;
 }
