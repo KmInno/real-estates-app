@@ -21,7 +21,7 @@ export function FeaturedProperties() {
               <div className="relative">
                 <img src={property.image} alt={property.title} className="h-72 w-full object-cover" />
                 <div className="absolute left-4 top-4">
-                  <Badge>{property.label ?? "Featured"}</Badge>
+                  <Badge>Featured</Badge>
                 </div>
               </div>
               <CardContent className="space-y-4 p-5">
