@@ -3,7 +3,7 @@ import { Card, CardContent } from "../ui/card";
 
 export function HomeContact() {
   return (
-    <section id="contact" className="mx-auto max-w-7xl px-4 pb-16 md:px-8">
+    <section id="contact" className="mx-auto max-w-7xl px-4 py-15 pb-16 md:px-8">
       <Card className="overflow-hidden rounded-[2rem] border-white/10 bg-gradient-to-r from-white/10 to-emerald-400/10 shadow-2xl">
         <CardContent className="grid gap-8 p-8 md:grid-cols-[1.4fr_1fr] md:items-center md:p-10">
           <div>
