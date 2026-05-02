@@ -8,7 +8,7 @@ const columnVariants = {
   show: (i: number) => ({
     opacity: 1,
     y: 0,
-    transition: { duration: 0.5, ease: "easeOut", delay: i * 0.1 },
+    transition: { duration: 0.5, delay: i * 0.1 },
   }),
 };
 
