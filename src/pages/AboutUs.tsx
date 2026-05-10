@@ -3,6 +3,9 @@ import { BadgeCheck, Globe2, ShieldCheck, Sparkles, Users } from "lucide-react";
 import { Card, CardContent } from "../components/ui/card";
 import { Button } from "../components/ui/button";
 
+import { HomeNavbar } from "../components/home/HomeNavbar";
+import { HomeFooter } from "../components/home/HomeFooter";
+
 const values = [
     {
         icon: ShieldCheck,
@@ -50,7 +53,11 @@ function ValueCard({
 
 export function AboutUs() {
     return (
+
+
         <div className="bg-[#07111f] text-white">
+            <HomeNavbar />
+
             {/* Hero */}
             <section className="relative overflow-hidden border-b border-white/10">
                 <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(255,255,255,0.10),transparent_28%),radial-gradient(circle_at_bottom_left,rgba(13,148,136,0.14),transparent_24%)]" />
@@ -183,6 +190,8 @@ export function AboutUs() {
                     </CardContent>
                 </Card>
             </section>
+
+            <HomeFooter />
         </div>
 
 

@@ -75,7 +75,7 @@ const heroStats = [
   { value: 1200, suffix: "+", label: "Successful deals", compact: true },
 ];
 
-function HeroStat({ value, label, suffix, compact }: any) {
+function HeroStat({ value, label, suffix, compact }: { value: number; label: string; suffix?: string; compact?: boolean }) {
   return (
     <Card className="rounded-2xl border-white/10 bg-white/5 text-white backdrop-blur-md">
       <div className="p-5">
@@ -90,7 +90,7 @@ function HeroStat({ value, label, suffix, compact }: any) {
 
 /* ---------------- Hero ---------------- */
 export default function HomeHero() {
-  const auctionEnd = React.useMemo(() => Date.now() + 48 * 60 * 60 * 1000, []);
+  const [auctionEnd] = React.useState(() => Date.now() + 48 * 60 * 60 * 1000);
 
   return (
     <section className="relative overflow-hidden text-white">

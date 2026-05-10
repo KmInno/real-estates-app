@@ -13,7 +13,9 @@ export function Home() {
       <HomeNavbar />
       <HomeHero />
       <SearchProperty />
+
       <FeaturedCategories />
+
       <WhyChooseUs />
       <WhatWeOffer />
       <HomeContact />
