@@ -108,7 +108,7 @@ export default function HomeHero() {
           </p>
 
           <div className="mt-8 flex flex-col gap-4 sm:flex-row">
-            <Button className="h-12 rounded-full bg-white px-6 text-slate-950 hover:bg-white/90">Browse Properties</Button>
+            <Button className="h-12 rounded-full bg-white px-6 text-slate-950 hover:bg-white/90" onClick={() => window.location.href = '/properties'}>Browse Properties</Button>
             <Button variant="outline" className="h-12 rounded-full border-white/15 bg-white/5 px-6 text-white hover:bg-white/10">Contact Us</Button>
           </div>
 
